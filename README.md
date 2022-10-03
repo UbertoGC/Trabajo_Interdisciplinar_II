@@ -15,6 +15,6 @@ y rapida para el usuario.
 - **e)** *MySQL*
  
 ### 🔩COLABORADORES🔩
-- [x] Ronald Gutierrez Arratia: Frontend (Home), Base de Datos y Frontend
+- [x] Ronald Gutierrez Arratia: Base de Datos y Frontend
 - [x] Uberto Garcia Caceres: Backend
 - [x] Fabrizio Miguel Mattos Cahui:  Backend
