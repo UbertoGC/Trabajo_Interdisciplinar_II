@@ -15,6 +15,6 @@ y rapida para el usuario.
 - **e)** *MySQL*
  
 ### 🔩COLABORADORES🔩
-- [x] Ronald Gutierrez Arratia: Frontend (Home), Arquitectura de Software y Base de datos 
-- [x] Uberto Garcia Caceres: Readme , Trello
-- [x] Fabrizio Miguel Mattos Cahui:  Readme, Requisitos de Software y Base de Datos
+- [x] Ronald Gutierrez Arratia: Frontend (Home), Base de Datos y Frontend
+- [x] Uberto Garcia Caceres: Backend
+- [x] Fabrizio Miguel Mattos Cahui:  Backend
