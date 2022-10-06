@@ -7,7 +7,7 @@ import json
 app = Flask(__name__)
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'Iloveforyou'
+app.config['MYSQL_PASSWORD'] = '>contraseña<'
 app.config['MYSQL_DB'] = 'Almacen'
 mysql = MySQL(app)
 
