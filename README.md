@@ -13,6 +13,7 @@ y rapida para el usuario.
 - **e)** *Bootstrap*
 - **e)** *jinja5*
 - **e)** *MySQL*
+- **e)** *Amazon Transcribe*
  
 ### 🔩COLABORADORES🔩
 - [x] Ronald Gutierrez Arratia: Base de Datos y Frontend
