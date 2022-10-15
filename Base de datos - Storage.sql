@@ -1,7 +1,7 @@
 CREATE DATABASE Almacen;
 USE  Almacen;
 
-CREATE TABLE usuariovalidarLogin(
+CREATE TABLE usuario(
 	id_user INT PRIMARY KEY auto_increment,
 	correo VARCHAR(45),
 	password_ VARCHAR(45)
@@ -17,6 +17,8 @@ CREATE TABLE almacen(
 CREATE TABLE items(
 	id_item INT auto_increment,
     id_alm INT,
+    cantidad INT,
+    unidad varchar(50),
     nombre varchar(50),
 	PRIMARY KEY (id_item),
     FOREIGN KEY (id_alm) REFERENCES almacen (id_alm)
