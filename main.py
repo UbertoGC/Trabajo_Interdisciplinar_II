@@ -2,18 +2,21 @@ from asyncio import get_event_loop
 import json
 from multiprocessing.connection import wait
 from flask import Flask, render_template, request, redirect, url_for, session, flash
-from flask_mysql_connector import MySQL
+from flask_mysqldb import MySQL, MySQLdb
 from sonido import *
 
 #https://www.it-swarm-es.com/es/python/usando-mysql-en-flask/941923326/
 # Para ejecutar el servicio debo ejecutar main.py
 
 app = Flask(__name__)
+app.debug = True
+app.secret_key ='secreto'
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'Hardware+10'
+app.config['MYSQL_PASSWORD'] = '209039'
 app.config['MYSQL_DB'] = 'almacen'
 mysql = MySQL(app)
+mysql.init_app(app)
 valor=["Presiona el boton de play para iniciar",0]
 app.secret_key='mysecretkey'
 dic_cantidad={'un':'1','uno':'1','dos':'2','tres':'3','cuatro':'4','cinco':'5','seis':'6','siete':'7','ocho':'8','nueve':'9','cero':'0'}
@@ -77,8 +80,7 @@ def sign_in():
 def logout():
     if 'correo' in session:
         session.pop('correo', None)
-        return redirect(url_for('sign_in'))
-
+        return render_template('index.html')
 @app.route('/contact',methods=["GET","POST"])
 def contact():
     return render_template('contact.html')
@@ -118,4 +120,4 @@ def validateLogin():
     return render_template('index.html', error = 'Usuario no existe')
 
 if __name__=='__main__':#si el archivo que se esta ejecutando es el main es decir el main.py entonces arranca el servidor
-    app.run(port=3000,debug=True)#corre el servidor
+    app.run(port=5000,debug=True)#corre el servidor
