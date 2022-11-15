@@ -26,7 +26,7 @@
             <li><a href="/info">Informacion</a></li>
             <li><a href="/contact">Nuestras redes</a></li>
                <li><a href="/uso">Uso de FastLogistics</a></li>
-            <li><a href="{{ url_for('logout')}}"> Cerrar Sesion </a></li>
+            <li><a href="/sign_in"> Cerrar Sesion </a></li>
          </div>
          <div class="search-icon">
             <span class="fas fa-search"></span>
@@ -42,10 +42,10 @@
       <label>
          {% if texto|length != 0 %}
             {% for z in texto%}
-               <label>{{z}}</label>
+               <label>{{z}}</label><br>
             {% endfor %}
          {% else %}
-            <label>Aqui se escribira el texto transcrito</label>
+            <label>Aqui se escribira el texto transcrito</label><br>
          {% endif %}
       </label>
       <div class="tabla-containers" align = "right">
@@ -53,8 +53,9 @@
             <thead>
                <tr>
                   <td>Cantidad</td>
-                  <td>Unidad de Medida</td>
-                  <td>Nombre de Producto</td>
+                  <td>Nombre</td>
+                  <td>Dosis</td>
+                  <td>Duración</td>
                </tr>
             </thead>
             <tbody>
@@ -77,6 +78,11 @@
          <a href="/transenvistop">
             <button id="stop">
                <img src="/static/images/stop.png" align="left" height ="100" width="100" />
+            </button>
+         </a>
+         <a href="/borrar">
+            <button id="clear">
+               Borrar
             </button>
          </a>
       </p> 
