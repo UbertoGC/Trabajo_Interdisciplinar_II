@@ -75,6 +75,9 @@ def main():
 @app.route('/sign_in',methods=["GET","POST"])
 def sign_in():
     return render_template('index.html')
+@app.route('/verPDF',methods=["GET","POST"])
+def verPDF():
+    return render_template('verPDF.html')
 
 @app.route('/logout')
 def logout():
