@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Easy Recetas</title>
+
+      <link rel="stylesheet" href="static/css/styles2.css">
+      <link rel="stylesheet" href="static/css/font-awesome.min.css">
+      <link rel="stylesheet" href="static/css/font-awesome.css">
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+      <link rel="stylesheet" href="static/css/styles.css">
+	  <link rel="stylesheet" href="static/css/r_social.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <body>
+	<nav>
+		<div class="menu-icon">
+		   <span class="fas fa-bars"></span>
+		</div>
+		<div class="logo">
+			<img src="/static/images/easy.png" weight="42" height="42"> Easy Recetas 
+		</div>
+		<div class="nav-items">
+			<li><a href="/main">Menu Principal</a></li>
+            <li><a href="/info">Informacion</a></li>
+           <li><a href="/contact">Nuestras redes</a></li>
+		      <li><a href="/verPDF">Uso de Easy Recetas</a></li>
+           <li><a href="{{ url_for('logout')}}"> Cerrar Sesion </a></li>
+		</div>
+		<div class="search-icon">
+		   <span class="fas fa-search"></span>
+		</div>
+		<div class="cancel-icon">
+		   <span class="fas fa-times"></span>
+		</div>
+		<form action="#">
+		   <input type="search" class="search-data" placeholder="Search" required>
+		   <button type="submit" class="fas fa-search"></button>
+		</form>
+	 </nav>
+    </div>
+    <center>
+        
+        <table width="500px" cellpadding="5px" cellspacing="5px" border="1">
+            <tr bgcolor="#CCCCCC">
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>Email</td>
+                <td>Edad</td>
+            </tr>
+            <tr bgcolor="#FF9933">
+                <td>Antonio</td>
+                <td>Lopez</td>
+                <td>alopez@gmail.com</td>
+                <td>25</td>
+            </tr>
+            <tr bgcolor="#FF9933">
+                <td>Sergio</td>
+                <td>Martinez</td>
+                <td>sgm@gmail.com</td>
+                <td>47</td>
+            </tr>
+            <tr bgcolor="#FF9933">
+                <td>Natalia</td>
+                <td>Estrada</td>
+                <td>natty@gmail.com</td>
+                <td>22</td>
+            </tr>
+        </table><br/>
+        <a class="btn btn-primary" href="pdf.php"><i class="fa fa-download"></i> Descargar archivo PDF</a>
+    </center>
+    </div>
+    
+	  <script src="/static/js/js_home.js"></script>
+   </body>
+</html>

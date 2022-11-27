@@ -14,49 +14,60 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
    <body>
-      <nav>
-         <div class="menu-icon">
-            <span class="fas fa-bars"></span>
-         </div>
-         <div class="logo">
-               FastLogistics
-         </div>
-         <div class="nav-items">
-            <li><a href="/main">Menu Principal</a></li>
-            <li><a href="/info">Informacion</a></li>
-            <li><a href="/contact">Nuestras redes</a></li>
-               <li><a href="/uso">Uso de FastLogistics</a></li>
-            <li><a href="/sign_in"> Cerrar Sesion </a></li>
-         </div>
-         <div class="search-icon">
-            <span class="fas fa-search"></span>
-         </div>
-         <div class="cancel-icon">
-            <span class="fas fa-times"></span>
-         </div>
-         <form action="#">
-            <input type="search" class="search-data" placeholder="Buscar" required>
-            <button type="submit" class="fas fa-search"></button>
-         </form>
-      </nav>
+    <nav>
+        <div class="menu-icon">
+           <span class="fas fa-bars"></span>
+        </div>
+        <div class="logo">
+         <img src="/static/images/easy.png" weight="42" height="42"> Easy Recetas 
+        </div>
+        <div class="nav-items">
+           <li><a href="/main">Menu Principal</a></li>
+           <li><a href="/contact">Nuestras redes</a></li>
+		      <li><a href="/uso">Uso de Easy Recetas</a></li>
+            <li><a href="/verPDF">GENERAR PDF</a></li>
+           <li><a href="{{ url_for('logout')}}"> Cerrar Sesion </a></li>
+        </div>
+        <div class="search-icon">
+           <span class="fas fa-search"></span>
+        </div>
+        <div class="cancel-icon">
+           <span class="fas fa-times"></span>
+        </div>
+        <form action="#">
+           <input type="search" class="search-data" placeholder="Buscar" required>
+           <button type="submit" class="fas fa-search"></button>
+        </form>
+     </nav>
+    
       <label>
          {% if texto|length != 0 %}
             {% for z in texto%}
                <label>{{z}}</label>
             {% endfor %}
          {% else %}
-            <label>Aqui se escribira el texto transcrito</label>
+            <label>Texto transcrito</label>
          {% endif %}
       </label>
       <div class="tabla-containers" align = "right">
          <table>
             <thead>
                <tr>
-                  <td>Cantidad</td>
-                  <td>Unidad de Medida</td>
-                  <td>Nombre de Producto</td>
+                  <td>Cantidad</td> <td>Unidad de Medida</td> <td>Nombre de Producto</td>
                </tr>
             </thead>
+            <tr>
+               <td>--</td><td>--</td><td>--</td>
+            </tr>
+            <tr>
+               <td>--</td><td>--</td><td>--</td>
+            </tr>
+            <tr>
+               <td>--</td><td>--</td><td>--</td>
+            </tr>
+            <tr>
+               <td>--</td><td>--</td><td>--</td>
+            </tr>
             <tbody>
                {% for v in valores%}
                   <tr>
@@ -79,6 +90,8 @@
                <img src="/static/images/stop.png" align="left" height ="100" width="100" />
             </button>
          </a>
-      </p> 
+         </p> 
+         
    </body>
+
 </html>
