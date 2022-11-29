@@ -10,10 +10,10 @@ body{
   display: grid;
   height: 100%;
   width: 100%;
-  background: -webkit-linear-gradient(left, #b62e2e, #282242);
+  background: -webkit-linear-gradient(left, #b62e2e, #432ca8);
 }
 nav{
-  background: #171c24;
+  background: #528ff0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -27,6 +27,7 @@ nav .logo{
   font-weight: 600;
   letter-spacing: -1px;
 }
+
 nav .nav-items{
   display: flex;
   flex: 1;
@@ -49,7 +50,7 @@ nav form{
   display: flex;
   height: 40px;
   padding: 2px;
-  background: #1e232b;
+  background: #202936;
   min-width: 18%!important;
   border-radius: 2px;
   border: 1px solid rgba(155,155,155,0.2);
@@ -158,7 +159,7 @@ nav .search-icon{
     content: '';
     height: 60px;
     padding: 2px;
-    background: #1e232b;
+    background: #598fe6;
     border-radius: 2px;
     min-width: calc(100% + 20px);
     z-index: -2;
@@ -238,7 +239,6 @@ nav .logo.space{
 .content .space{
   margin: 10px 0;
 }
-
 .teeext{
   font-size: 20px;
   font-weight: 600;

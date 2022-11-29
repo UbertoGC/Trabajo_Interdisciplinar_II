@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <!-- Created By CodingNepal -->
 <html lang="en" dir="ltr">
-   
    <head>
         <meta charset="utf-8">
         <title>Transcripcion</title>
@@ -14,60 +13,50 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
    <body>
-    <nav>
-        <div class="menu-icon">
-           <span class="fas fa-bars"></span>
-        </div>
-        <div class="logo">
-         <img src="/static/images/easy.png" weight="42" height="42"> Easy Recetas 
-        </div>
-        <div class="nav-items">
-           <li><a href="/main">Menu Principal</a></li>
-           <li><a href="/contact">Nuestras redes</a></li>
-		      <li><a href="/uso">Uso de Easy Recetas</a></li>
-            <li><a href="/verPDF">GENERAR PDF</a></li>
-           <li><a href="{{ url_for('logout')}}"> Cerrar Sesion </a></li>
-        </div>
-        <div class="search-icon">
-           <span class="fas fa-search"></span>
-        </div>
-        <div class="cancel-icon">
-           <span class="fas fa-times"></span>
-        </div>
-        <form action="#">
-           <input type="search" class="search-data" placeholder="Buscar" required>
-           <button type="submit" class="fas fa-search"></button>
-        </form>
-     </nav>
-    
+      <nav>
+         <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+         </div>
+         <div class="logo">
+            <img src="/static/images/easy.png" weight="42" height="42"> Easy Recetas 
+         </div>
+         <div class="nav-items">
+            <li><a href="/main">Menu Principal</a></li>
+            <li><a href="/contact">Nuestras redes</a></li>
+             <li><a href="/uso">Uso de Easy Recetas</a></li>
+             <li><a href="/verPDF">GENERAR PDF</a></li>
+            <li><a href="{{ url_for('logout')}}"> Cerrar Sesion </a></li>
+         </div>
+         <div class="search-icon">
+            <span class="fas fa-search"></span>
+         </div>
+         <div class="cancel-icon">
+            <span class="fas fa-times"></span>
+         </div>
+         <form action="#">
+            <input type="search" class="search-data" placeholder="Buscar" required>
+            <button type="submit" class="fas fa-search"></button>
+         </form>
+      </nav>
       <label>
          {% if texto|length != 0 %}
             {% for z in texto%}
-               <label>{{z}}</label>
+               <label>{{z}}</label><br>
             {% endfor %}
          {% else %}
-            <label>Texto transcrito</label>
+            <label>Aqui se escribira el texto transcrito</label><br>
          {% endif %}
       </label>
       <div class="tabla-containers" align = "right">
          <table>
             <thead>
                <tr>
-                  <td>Cantidad</td> <td>Unidad de Medida</td> <td>Nombre de Producto</td>
+                  <td>Cantidad</td>
+                  <td>Nombre</td>
+                  <td>Dosis</td>
+                  <td>Duración</td>
                </tr>
             </thead>
-            <tr>
-               <td>--</td><td>--</td><td>--</td>
-            </tr>
-            <tr>
-               <td>--</td><td>--</td><td>--</td>
-            </tr>
-            <tr>
-               <td>--</td><td>--</td><td>--</td>
-            </tr>
-            <tr>
-               <td>--</td><td>--</td><td>--</td>
-            </tr>
             <tbody>
                {% for v in valores%}
                   <tr>
@@ -90,8 +79,11 @@
                <img src="/static/images/stop.png" align="left" height ="100" width="100" />
             </button>
          </a>
-         </p> 
-         
+         <a href="/borrar">
+            <button id="clear">
+               Borrar
+            </button>
+         </a>
+      </p> 
    </body>
-
 </html>
